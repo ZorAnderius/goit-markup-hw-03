@@ -1,0 +1,276 @@
+/* --------index.html styles--------- */
+
+:root {
+  --title-color: #2e2f42; /* title,button, logo, background */
+  --accent-color: #404bbf; /* hover,focus */
+  --button-logo-color: #4d5ae5; /* logo,btn text and background*/
+  --text-desc-color: #434455; /* text and address*/
+  --hero-back-color: #ffffff; /* hero's text, background and text(hover,focus)*/
+  --back-logo-color: #f4f4fd; /* logo, btn(background -text and -color)*/
+  --logo-border-color: #e7e9fc; /* logo-footer,btn border*/
+  --title-hero-weight: 500;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: var(--title-hero-weight);
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 36px;
+  line-height: 1.11;
+  text-transform: capitalize;
+}
+
+.subtitle {
+  font-weight: var(--title-hero-weight);
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.text-desc {
+  color: var(--text-desc-color);
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style-type: none;
+}
+
+/* -----HEADER------------ */
+
+/* .header-index {
+}*/
+/* .header-navigation {
+}  */
+
+.header-logo,
+.footer-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--button-logo-color);
+}
+
+.header-logo {
+  line-height: 1.33;
+}
+
+.header-logo > span {
+  color: var(--title-color);
+}
+
+/* .header-list {
+}*/
+/* .header-item {
+}  */
+
+.header-link,
+.projects-subtitle {
+  font-weight: var(--title-hero-weight);
+  color: inherit;
+}
+
+/* .header-link {
+} */
+
+.header-link:hover,
+.header-link:focus {
+  color: var(--accent-color);
+}
+
+.header-address {
+  font-style: normal;
+}
+
+/* .header-address-list {
+}*/
+/* .header-mail {
+}  */
+
+.header-mail-link,
+.header-phone-link {
+  color: var(--text-desc-color);
+}
+
+/* .header-phone {
+}*/
+/* .header-mail-link{
+} */
+/* .header-phone-link{
+}  */
+
+.header-mail-link:hover,
+.header-phone-link:hover,
+.header-mail-link:focus,
+.header-phone-link:focus {
+  color: var(--accent-color);
+}
+
+/* -----------HERO------------ */
+.hero {
+  background-color: var(--title-color);
+}
+.hero-title {
+  font-size: 56px;
+  line-height: 1.07;
+  color: var(--hero-back-color);
+}
+
+.hero-btn {
+  color: var(--hero-back-color);
+
+  background: var(--button-logo-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--accent-color);
+}
+
+/* ---SECTION 2 index.html */
+
+/* .main-index{
+}*/
+/* .main-priorities {
+} */
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* .priorities-list {
+} */
+/* .priorities-item {
+}  */
+/* .priorities-subtitle {
+} */
+/* .priorites-desc {
+} */
+
+/* ---SECTION 3 index.html */
+
+/* .main-results {
+} */
+/* .results-title{
+} */
+/* .results-list {
+}*/
+/* .results-item {
+} */
+/* .results-image{
+}  */
+
+/* ---SECTION 4 index.html */
+.main-team {
+  background-color: var(--back-logo-color);
+}
+/* .team-title {
+} */
+/* .team-list {
+} */
+
+.team-item {
+  background-color: var(--hero-back-color);
+}
+
+.project-desc {
+  color: var(--text-desc-color);
+}
+
+/* .team-image {
+} */
+/* .team-name {
+} */
+/* .team-job {
+} */
+
+/* -------------FOOTER------------- */
+
+.footer-index,
+.footer-portfolio {
+  background-color: var(--title-color);
+}
+.footer-logo {
+  line-height: 1.17;
+}
+
+.footer-logo > span {
+  color: var(--back-logo-color);
+}
+
+.footer-desc {
+  color: var(--logo-border-color);
+}
+
+/*--------- Portfolio's styles *-------------/
+
+/* ----SECTION WITH BUTTONS---------- */
+/* .header-portfolio{
+} */
+/* .main-portfolio {
+}*/
+/* .main-portfolio-list {
+} */
+/* .main-portfolio-item {
+}  */
+
+.main-portfolio-btn {
+  text-align: center;
+  color: var(--button-logo-color);
+
+  background: var(--back-logo-color);
+  border: 1px solid var(--logo-border-color);
+  border-radius: 4px;
+}
+
+.main-portfolio-btn:hover,
+.main-portfolio-btn:focus {
+  color: var(--hero-back-color);
+  background-color: var(--accent-color);
+}
+
+/* -----SECTION WITH PROJECTS */
+/* .main-projects {
+}*/
+/* .projects-list {
+} */
+/* .project-item {
+} */
+.projects-link {
+  color: inherit;
+}
+/* .projects-image {
+}  */
+/* .projects-subtitle {
+} */
+/* .project-desc {
+} */
