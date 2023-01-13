@@ -9,6 +9,7 @@
   --back-logo-color: #f4f4fd; /* logo, btn(background -text and -color)*/
   --logo-border-color: #e7e9fc; /* logo-footer,btn border*/
   --title-hero-weight: 500;
+  --gap_between_img: 24px;
 }
 
 body {
@@ -63,11 +64,7 @@ h3 {
   margin: 0;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
+ul,
 p {
   margin: 0;
   padding: 0;
@@ -83,15 +80,31 @@ img {
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
-  outline: 1px solid tomato;
+}
+
+.section {
+  padding-top: 120px;
 }
 
 /* -----HEADER------------ */
 
-/* .header-index {
-} */
-/* .header-navigation {
-}  */
+.header-index,
+.header-portfolio {
+  padding-top: var(--gap_between_img);
+  padding-bottom: var(--gap_between_img);
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container,
+.header-portfolio-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-navigation {
+  display: flex;
+  margin-right: auto;
+}
 
 .header-logo,
 .footer-logo {
@@ -105,16 +118,23 @@ img {
 
 .header-logo {
   line-height: 1.33;
+  margin-right: 76px;
 }
 
 .header-logo > span {
   color: var(--title-color);
 }
 
-/* .header-list {
-}*/
+.header-list {
+  display: flex;
+  gap: 40px;
+}
 /* .header-item {
 }  */
+
+.link.current-page {
+  color: var(--accent-color);
+}
 
 .header-link,
 .projects-subtitle {
@@ -132,13 +152,15 @@ img {
 
 .header-address {
   font-style: normal;
-  padding-bottom: 24px;
 }
 
-/* .header-address-list {
-}*/
-/* .header-mail {
-}  */
+.header-address-list {
+  display: flex;
+}
+
+.header-mail {
+  margin-right: 40px;
+}
 
 .header-mail-link,
 .header-phone-link {
@@ -163,7 +185,11 @@ img {
 .hero {
   background-color: var(--title-color);
   text-align: center;
-  margin-bottom: 120px;
+}
+
+.container.heroes {
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 .hero-title {
   font-size: 56px;
@@ -171,19 +197,17 @@ img {
   color: var(--hero-back-color);
 
   max-width: 494px;
-
-  padding-top: 188px;
   margin: 0 auto 40px auto;
 }
 
 .hero-btn {
+  min-width: 169px;
   color: var(--hero-back-color);
-
   background: var(--button-logo-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-color: transparent;
   border-radius: 4px;
-
-  margin-bottom: 188px;
+  padding: 12px 0;
 }
 
 .hero-btn:hover,
@@ -195,9 +219,8 @@ img {
 
 /* .main-index{
 }*/
-.main-priorities {
-  margin-bottom: 120px;
-}
+/* .main-priorities {
+} */
 
 .visually-hidden {
   position: absolute;
@@ -212,14 +235,21 @@ img {
   margin: -1px;
 }
 
-/* .priorities-list {
-  padding-top: 120px;
-} */
+.priorities-list {
+  display: flex;
+  gap: var(--gap_between_img);
+}
 /* .priorities-item {
 }  */
+
+.priorities-subtitle,
+.projects-subtitle,
+.team-name {
+  margin-bottom: 8px;
+}
+
 .priorities-subtitle {
   text-align: left;
-  margin-bottom: 8px;
 }
 .priorites-desc {
   text-align: inherit;
@@ -228,14 +258,24 @@ img {
 
 /* ---SECTION 3 index.html */
 
-.main-results {
-  margin-bottom: 120px;
+.main-results,
+.main-team,
+.main-projects {
+  padding-bottom: 120px;
 }
-.results-title {
+
+/* .main-results {
+} */
+
+.results-title,
+.team-title {
   margin-bottom: 72px;
 }
-/* .results-list {
-}*/
+
+.results-list {
+  display: flex;
+  gap: var(--gap_between_img);
+}
 /* .results-item {
 } */
 /* .results-image{
@@ -245,12 +285,13 @@ img {
 .main-team {
   background-color: var(--back-logo-color);
 }
-.team-title {
-  padding-top: 120px;
-  margin-bottom: 72px;
-}
+
+/* .team-title {
+} */
+
 .team-list {
-  padding-bottom: 120px;
+  display: flex;
+  gap: var(--gap_between_img);
 }
 
 .team-item {
@@ -261,16 +302,18 @@ img {
   color: var(--text-desc-color);
 }
 
-.team-image {
-  margin-bottom: 32px;
-}
+/* .team-image {
+} */
 
 .team-content {
+  padding: 32px 16px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
-.team-name {
-  margin-bottom: 8px;
-}
+/* .team-name {
+} */
 /* .team-job {
 } */
 
@@ -303,13 +346,18 @@ img {
 /*--------- Portfolio's styles *-------------/
 
 /* ----SECTION WITH BUTTONS---------- */
-/* .header-portfolio{
+/* .header-portfolio{-
 } */
 /* .main-portfolio {
 }*/
 .main-portfolio-list {
   padding-top: 109px;
   margin-bottom: 59px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  gap: var(--gap_between_img);
 }
 /* .main-portfolio-item {
 }  */
@@ -321,6 +369,8 @@ img {
   background: var(--back-logo-color);
   border: 1px solid var(--logo-border-color);
   border-radius: 4px;
+
+  padding: 12px var(--gap_between_img);
 }
 
 .main-portfolio-btn:hover,
@@ -330,24 +380,35 @@ img {
 }
 
 /* -----SECTION WITH PROJECTS */
+
 /* .main-projects {
-}*/
+} */
 .projects-list {
-  padding-bottom: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc(100%-2 * 24px) / 3;
+  gap: var(--gap_between_img);
 }
 /* .project-item {
 } */
 
 .project-content {
   padding: 32px 0px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 .projects-link {
   color: inherit;
 }
 /* .projects-image {
 }  */
-.projects-subtitle {
-  margin-bottom: 8px;
-}
+/* .projects-subtitle {
+} */
 /* .project-desc {
 } */
+
+.projects-subtitle,
+.project-desc {
+  padding-left: 16px;
+  text-align: left;
+}
