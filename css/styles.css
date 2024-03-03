@@ -1,0 +1,269 @@
+:root {
+    --title-color: #2E2F42;       /* title,button, logo, background */
+    --accent-color: #404BBF;      /* hover,focus */
+    --text-color: #434455;        /* text and address*/
+    --back-hero-color: #FFFFFF;   /* hero's text, background and text(hover,focus)*/
+    --back-footer-color: #F4F4FD; /* logo, btn(background -text and -color)*/
+    --logo-btn-color: #4D5AE5;    /* logo,btn text and background*/
+    --logo-border-color: #e7e9fc;/* logo-footer,btn border*/
+    --title-hero-weight: 500;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    color: var(--title-color)
+}
+
+.title {
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+}
+
+.subtitle {
+    font-weight: var(--title-hero-weight);
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.btn {
+    font-family: inherit;
+    font-weight: var(--title-hero-weight);
+    line-height: inherit;
+    letter-spacing: 0.64px;
+    cursor: pointer;
+}
+
+/* #region Header */
+
+/* .header-studio {} */
+
+/* .header-studio-nav {} */
+
+
+.nav-logo,
+.footer-studio-logo,
+.footer-portfolio-logo {
+    color: var(--logo-btn-color);
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.17;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+}
+
+.header-second-logo {
+    color: var(--title-color);
+}
+
+/* .nav-list {} */
+
+/* .nav-list-item {} */
+
+.nav-item-link {
+    color: inherit;
+    font-weight: var(--title-hero-weight);
+}
+
+.nav-item-link:hover,
+.nav-item-link:focus {
+    color: var(--accent-color);
+}
+
+/* .header-studio-address {} */
+
+/* .address-list {} */
+
+/* .adress-list-item {} */
+
+.address-item-link {
+    color: inherit;
+    font-style: normal;
+}
+
+.address-item-link:hover,
+.address-item-link:focus {
+    color: var(--accent-color);
+}
+
+/* #endregion */
+
+/* #region Hero */
+.hero {
+    background: var(--title-color);
+}
+
+.hero-title {
+    color: var(--back-hero-color);
+
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 1.12px;
+}
+
+.hero-btn {
+    width: 169px;
+    height: 56px;
+    border-radius: 4px;
+    color: var(--back-hero-color);
+    background: var(--logo-btn-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+    background: var(--accent-color);
+}
+
+/* #endregion */
+
+/* #region Feature */
+
+/* .features {} */
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+/* .fratures-list {} */
+
+/* .features-list-item {} */
+
+/* .features-item-title {} */
+
+/* .features-item-text {} */
+
+/* #endregion */
+
+/* #region Products */
+/* .products {} */
+
+/* .products-title {} */
+
+/* .products-list {} */
+
+/* .products-list-item {} */
+
+/* .products-item-img {} */
+/* #endregion Products */
+
+/* #region Team */
+.team {
+    background: var(--back-footer-color);  
+}
+
+/* .team-title {} */
+
+/* .team-list {} */
+
+.team-list-item {
+    border-radius: 0px 0px 4px 4px;
+    background: var(--back-hero-color);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+/* .team-item-img {} */
+
+/* .team-item-title {} */
+
+.team-item-text {
+    color: var(--text-color)
+}
+
+/* #endregion Team */
+
+/* #region Studio Footer */
+.footer-studio,
+.footer-portfolio{
+    background: var(--title-color);
+}
+
+.footer-second-logo {
+    color: var(--back-footer-color);
+}
+
+.footer-studio-text,
+.footer-portfolio-text {
+    color: var(--back-footer-color);
+}
+
+/* #endregion Studio Footer */
+
+
+
+/* Portfolio */
+
+/* #region Header */
+/* .header-portfolio {} */
+
+/* .header-portfolio-nav {} */
+
+/* .header-portfolio-address {} */
+
+/* #endregion Header */
+
+/* #region Projects Portfolio */
+/* .main-portfolio {} */
+
+/* .main-projects {} */
+
+/* .projects-filter-list {} */
+
+/* .filter-list-item {} */
+
+.filter-item-btn {
+    color: var(--logo-btn-color);
+    font-weight: var(--title-hero-weight);
+    letter-spacing: 0.64px;
+
+    border-radius: 4px;
+    border: 1px solid var(--logo-border-color);
+    background-color: var(--back-footer-color);
+}
+
+.filter-item-btn:hover,
+.filter-item-btn:focus {
+    color: var(--back-hero-color);
+
+    background: var(--accent-color);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+}
+
+/* .projects-list {} */
+
+/* .projects-list-item {} */
+
+/* .projects-item-img {} */
+
+/* .projects-item-title {} */
+
+.projects-item-text {
+    color: var(--text-color);
+}
+/* #endregion Project Portfolio */
+
+/* #region Portfolio Footer */
+/* #endregion Portfolio Footer */
