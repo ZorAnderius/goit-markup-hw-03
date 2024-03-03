@@ -1,4 +1,5 @@
 :root {
+    /*  Colors */
     --title-color: #2E2F42;       /* title,button, logo, background */
     --accent-color: #404BBF;      /* hover,focus */
     --text-color: #434455;        /* text and address*/
@@ -6,15 +7,49 @@
     --back-footer-color: #F4F4FD; /* logo, btn(background -text and -color)*/
     --logo-btn-color: #4D5AE5;    /* logo,btn text and background*/
     --logo-border-color: #e7e9fc;/* logo-footer,btn border*/
+    /* Fonts */
     --title-hero-weight: 500;
+
+    /* Gaps */
+    --items: 4;
+    --gap: 24px;
+    --gap-nav: 40px;
+
+    /* Margins */
+    --mb-title: 72px;
+    --mb-desc: 8px;
+
+    /* Padding */
+    --pt-section: 120px;
+    --pb-section: 120px;
+
+    --pt-footer: 101px;
+    --pb-footer: 100px;
 }
+
+/* #region Common styles */
 
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.32px;
-    color: var(--title-color)
+    color: var(--title-color);
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 .title {
@@ -22,6 +57,7 @@ body{
     line-height: 1.11;
     letter-spacing: 0.72px;
     text-transform: capitalize;
+    text-align: center;
 }
 
 .subtitle {
@@ -47,12 +83,46 @@ body{
     cursor: pointer;
 }
 
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding-top: var(--pt-section);
+}
+
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.card-set-item {
+    flex-basis: calc((100% - (var(--items) - 1) * var(--gap)) / var(--items));
+}
+
+/* #endregion */
+
 /* #region Header */
 
-/* .header-studio {} */
+.header-studio .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--logo-border-color);
+}
 
-/* .header-studio-nav {} */
+.header-studio-nav {
+    display: flex;
+    gap: 76px;
+}
 
+.nav-logo{
+    display: block;
+    padding: 24px 0;
+}
 
 .nav-logo,
 .footer-studio-logo,
@@ -70,12 +140,22 @@ body{
     color: var(--title-color);
 }
 
-/* .nav-list {} */
+.nav-list {
+    display: flex;
+    gap: var(--gap-nav);
+
+}
 
 /* .nav-list-item {} */
 
-.nav-item-link {
+.nav-item-link,
+.address-item-link {
+    display: block;
+    padding: 24px 0;
     color: inherit;
+}
+
+.nav-item-link {
     font-weight: var(--title-hero-weight);
 }
 
@@ -86,12 +166,14 @@ body{
 
 /* .header-studio-address {} */
 
-/* .address-list {} */
+.address-list {
+    display: flex;
+    gap: var(--gap-nav);
+}
 
 /* .adress-list-item {} */
 
 .address-item-link {
-    color: inherit;
     font-style: normal;
 }
 
@@ -107,21 +189,31 @@ body{
     background: var(--title-color);
 }
 
+.hero .container{
+    padding: 188px 0; 
+    text-align: center;
+
+}
+
 .hero-title {
     color: var(--back-hero-color);
-
+    width: 496px;
+    height: 120px;
+    text-align: center;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 1.12px;
+    margin: 0 auto 48px auto;
 }
 
 .hero-btn {
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     border-radius: 4px;
     color: var(--back-hero-color);
     background: var(--logo-btn-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-color: transparent;
 }
 
 .hero-btn:hover,
@@ -134,6 +226,10 @@ body{
 /* #region Feature */
 
 /* .features {} */
+
+.features .container {
+    display: flex;
+}
 
 .visually-hidden {
     position: absolute;
@@ -152,18 +248,26 @@ body{
 
 /* .features-list-item {} */
 
-/* .features-item-title {} */
+.features-item-title {
+    margin-bottom: var(--mb-desc);
+}
 
 /* .features-item-text {} */
 
 /* #endregion */
 
 /* #region Products */
-/* .products {} */
+.products {
+    padding-bottom: var(--pb-section);
+}
 
-/* .products-title {} */
+.products-title {
+    margin-bottom: var(--mb-title);
+}
 
-/* .products-list {} */
+.products-list {
+    --items: 3;
+}
 
 /* .products-list-item {} */
 
@@ -173,9 +277,17 @@ body{
 /* #region Team */
 .team {
     background: var(--back-footer-color);  
+    padding-bottom: var(--pb-section);
 }
 
-/* .team-title {} */
+.team-desc-container {
+    padding: 32px 0;
+    text-align: center;
+}
+
+.team-title {
+    margin-bottom: var(--mb-title);
+}
 
 /* .team-list {} */
 
@@ -187,7 +299,9 @@ body{
 
 /* .team-item-img {} */
 
-/* .team-item-title {} */
+.team-item-title {
+    margin-bottom: var(--mb-desc);
+}
 
 .team-item-text {
     color: var(--text-color)
@@ -199,6 +313,12 @@ body{
 .footer-studio,
 .footer-portfolio{
     background: var(--title-color);
+    padding: var(--pt-footer) 0 var(--pb-footer) 0;
+}
+
+.footer-studio-logo {
+    display: block;
+    margin-bottom: 17px;
 }
 
 .footer-second-logo {
@@ -208,6 +328,7 @@ body{
 .footer-studio-text,
 .footer-portfolio-text {
     color: var(--back-footer-color);
+    max-width: 264px;
 }
 
 /* #endregion Studio Footer */
