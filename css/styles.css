@@ -63,13 +63,6 @@ img {
     text-align: center;
 }
 
-.subtitle {
-    font-weight: var(--title-hero-weight);
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.4px;
-}
-
 .link {
     text-decoration: none;
 }
@@ -195,11 +188,11 @@ img {
 
 /* #region Hero */
 .hero {
+    padding: 188px 0;
     background: var(--title-color);
 }
 
 .hero .container{
-    padding: 188px 0; 
     text-align: center;
 
 }
@@ -256,8 +249,15 @@ img {
 
 /* .features-list-item {} */
 
-.features-item-title {
+.features-item-title,
+.team-item-title,
+.projects-item-title {
     margin-bottom: var(--mb-desc);
+    
+    font-weight: var(--title-hero-weight);
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
 }
 
 /* .features-item-text {} */
@@ -306,10 +306,6 @@ img {
 }
 
 /* .team-item-img {} */
-
-.team-item-title {
-    margin-bottom: var(--mb-desc);
-}
 
 .team-item-text {
     color: var(--text-color)
@@ -406,10 +402,6 @@ img {
     padding: var(--ptb-portfolio-cards) var(--prl-portfolio-cards);
     border: 1px solid var(--logo-border-color);
     border-top: none;
-}
-
-.projects-item-title {
-    margin-bottom: var(--mb-desc);
 }
 
 .projects-item-text {
